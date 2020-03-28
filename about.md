@@ -4,12 +4,8 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
-
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
+Male Mongolian junior developer in Korea
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[msrhc04@gmail.com](mailto:msrhc04@gmail.com)
