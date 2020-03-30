@@ -44,14 +44,14 @@ Two`s complement = One`s complement + 1
 << - Binary Left Shif Operator. The left operands value is moved left by the number of bits specified by the right operand.
 00011 << 2 = 01100
 
->> - Binary Right Shift Operator. The left operands value is moved right by the number of bits specified by the right operand.
+">>" - Binary Right Shift Operator. The left operands value is moved right by the number of bits specified by the right operand.
 10010 >> 2 = 00100
 
 ## Recursive function
 
 A function that calls itself is known as a recursive function. And, this technique is known as recursion.
 
-```objc
+```c
 #include<stdio.h>
 
 int factorial(int n) {
@@ -73,8 +73,55 @@ data_type *var_name; => int *p;
 
 In C pointers and arrays are almost same.
 
-```objc
+```c
 int numbers[] = {1, 2, 3, 4, 5};
 int *pointer = numbers;
 printf("%d\n", pointer[1]);
 ```
+Pointers can point to a pointer.
+
+```c
+int a = 5;
+int *b = &a;
+int **c = &b;
+printf("%d\n", **c);
+```
+
+## Strings
+
+Strings are defined as an array of characters. The difference between a character array and a string is the string is terminated with a special character '\0'. Declaring string is as simple as declaring a one dimensional array.
+
+```c
+char string[10];
+```
+
+A string can be initialized in different ways.
+
+```c
+char str1[] = "Hello World";
+char str2[20] = "Hello World";
+char str3[] = {'H','e','l','l','o',' ','W','o','r','l','d','\0'};
+char str4[12] = {'H','e','l','l','o',' ','W','o','r','l','d','\0'};
+```
+
+Pointers can point to a string.
+
+```c
+char *c = "Hello World";
+printf("%s\n", c);
+```
+
+## Storing variables
+
+Program must be loaded on memory before it runs. Typical operating system manages memory by 4 sections.
+
+Code section: source code
+Data section: global variable, static variable
+Heap section: dynamically allocated variable
+Stack section: local variable, parameter
+
+There are two ways to pass parameters in C: Pass by Value, Pass by Reference.
+
+Pass by Value, means that a copy of the data is made and stored by way of the name of the parameter. Any changes to the parameter have no affect on data in the calling function.
+
+Pass by Reference, means a reference parameter refers to the original data in the calling function. Thus any changes made to the parameter are also made to the original variable.
